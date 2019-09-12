@@ -6,10 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Movies</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <p>Hello World, it is a wonderfull world!</p>
+  <h2>-- REST API --</h2>
+  <h3>Simple Movie Database App</h3>
+  <form id="user_form">
+    <fieldset>
+      <label>Get All Movies: </label>
+      <button id="getButton" name="getButton" value="submit" type="submit">Get Movies</button>
+      <br />
+      <hr>
+      <label>Get Single Movie: </label><br />
+      <label>Movie ID</label>
+      <input id="movieId" name="movieId" type="text" placeholder="Get Single Movie">
+      <button id="getButton" name="getButton" value="submit" type="submit">Get Movie</button>
+    </fieldset>
+  </form>
+  <form id="user_form_post">
+    <fieldset>
+      <label>Post New Movie: </label><br />
+      <label>Movie Title</label>
+      <input id="movieInput" type="text" name="movieTitle" placeholder="Movie Title" />
+      <label>Movie Director</label>
+      <input id="directorInput" type="text" name="movieDirector" placeholder="Movie Director" />
+      <button id="postButton" value="submit" type="submit" name="postButton" method="POST">Add Movie</button>
+    </fieldset>
+  </form>
+  <form id="user_form_delete">
+    <fieldset>
+      <label>Delete Movie: </label><br />
+      <label>Movie ID</label>
+      <input id="movieId" name="movieId" type="text" placeholder="Movie ID" />
+      <button type="submit">Delete Movie</button>
+    </fieldset>
+  </form>
+  <form id="user_form_put">
+    <fieldset>
+      <label>Update Movie: </label><br />
+      <label>Movie Title</label>
+      <input id="movieInput" type="text" name="movieTitle" placeholder="Movie Title" />
+      <label>Movie Director</label>
+      <input id="directorInput" type="text" name="movieDirector" placeholder="Movie Director" />
+      <label>Movie ID</label>
+      <input id="movieId" name="movieId" type="text" placeholder="Movie ID" />
+      <button id="putButton" value="submit" type="submit" name="putButton" method="PUT">Update Movie</button>
+    </fieldset>
+  </form>
+  <h2>Movies in Database: </h2>
+  <div id="results"></div>
+  <script src="./api.js"></script>
 </body>
 
 </html>
